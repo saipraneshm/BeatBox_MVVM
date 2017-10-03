@@ -1,0 +1,24 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.pranesh.databinding.beatbox.SoundViewModel"/>
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_8">
+        <Button
+            android:layout_width="@dimen/btn_width"
+            android:layout_height="@dimen/btn_height"
+            android:layout_gravity="center"
+            tools:text="Sound Name"
+            android:text="@{viewModel.title}"
+            android:onClick="@{() -> viewModel.onButtonClicked()}"
+            />
+    </FrameLayout>
+
+
+</layout>
